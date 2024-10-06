@@ -16,13 +16,20 @@ export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null)
 
   useEffect(() => {
+    WebApp.ready();
+
     if (WebApp.initDataUnsafe.user as UserData) {
       setUserData(WebApp.initDataUnsafe.user as UserData)
     }
   }, []);
 
+  const onClose = () => {
+    WebApp.close()
+  }
+
   return (
     <main className={"p-4"}>
+      <button onClick={onClose}>Close</button>
       {
         userData ?
             (
