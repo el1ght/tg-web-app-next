@@ -1,7 +1,11 @@
-"use client"
+'use client'
 
 import {useEffect, useState} from "react";
-import WebApp from "@twa-dev/sdk";
+// import dynamic from "next/dynamic";
+// const dynamicWebApp = dynamic(() => import('@twa-dev/sdk'), {
+//   ssr: false,
+// })
+import dynamicWebApp from "@twa-dev/sdk";
 
 interface UserData {
   id: number;
@@ -13,23 +17,28 @@ interface UserData {
 }
 
 export default function Home() {
-  const [userData, setUserData] = useState<UserData | null>(null)
+  const [userData, setUserData] = useState<UserData | null>(() => {
+    if(typeof window !== "undefined"){
+      return null
+    }
+  })
+
+
 
   useEffect(() => {
-    WebApp.ready();
 
-    if (WebApp.initDataUnsafe.user as UserData) {
-      setUserData(WebApp.initDataUnsafe.user as UserData)
+    if(typeof window !== "undefined"){
+      if (dynamicWebApp.initDataUnsafe.user as UserData) {
+        setUserData(dynamicWebApp.initDataUnsafe.user as UserData)
+      }
     }
+
+
   }, []);
 
-  const onClose = () => {
-    WebApp.close()
-  }
 
   return (
     <main className={"p-4"}>
-      <button onClick={onClose}>Close</button>
       {
         userData ?
             (
