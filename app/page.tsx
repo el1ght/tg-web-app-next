@@ -17,11 +17,7 @@ interface UserData {
 }
 
 export default function Home() {
-  const [userData, setUserData] = useState<UserData | null>(() => {
-    if(typeof window !== "undefined"){
-      return null
-    }
-  })
+  const [userData, setUserData] = useState<UserData | null>(null)
 
 
 
