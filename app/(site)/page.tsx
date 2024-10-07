@@ -1,11 +1,7 @@
 'use client'
 
 import {useEffect, useState} from "react";
-// import dynamic from "next/dynamic";
-// const dynamicWebApp = dynamic(() => import('@twa-dev/sdk'), {
-//   ssr: false,
-// })
-import dynamicWebApp from "@twa-dev/sdk";
+import WebApp from "@twa-dev/sdk";
 
 interface UserData {
   id: number;
@@ -19,19 +15,16 @@ interface UserData {
 export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null)
 
-
-
   useEffect(() => {
-
     if(typeof window !== "undefined"){
-      if (dynamicWebApp.initDataUnsafe.user as UserData) {
-        setUserData(dynamicWebApp.initDataUnsafe.user as UserData)
+
+      WebApp.ready();
+
+      if (WebApp.initDataUnsafe.user as UserData) {
+        setUserData(WebApp.initDataUnsafe.user as UserData)
       }
     }
-
-
   }, []);
-
 
   return (
     <main className={"p-4"}>
@@ -46,7 +39,7 @@ export default function Home() {
                     <li>Last Name: {userData.last_name}</li>
                     <li>Username: {userData.username}</li>
                     <li>Language Code: {userData.language_code}</li>
-                    <li>Is premium: {userData.is_premium}</li>
+                    <li>Is premium: {userData.is_premium ? "Yes" : "No"}</li>
                   </ul>
                 </>
             ) :
