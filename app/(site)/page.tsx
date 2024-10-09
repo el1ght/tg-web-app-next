@@ -2,7 +2,13 @@
 
 import {useState, useEffect} from "react";
 
-import WebApp from "@twa-dev/sdk";
+declare global {
+  interface Window {
+    Telegram?: {
+      WebApp?: unknown
+    }
+  }
+}
 
 interface UserData {
   id: number;
@@ -17,11 +23,11 @@ export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null)
 
   useEffect(() => {
-    if (typeof window !== "undefined"){
-      WebApp.ready();
+    if (window.Telegram?.WebApp){
+      window.Telegram?.WebApp.ready();
 
-      if (WebApp.initDataUnsafe.user as UserData) {
-        setUserData(WebApp.initDataUnsafe.user as UserData)
+      if (window.Telegram?.WebApp.initDataUnsafe.user as UserData) {
+        setUserData(window.Telegram?.WebApp.initDataUnsafe.user as UserData)
       }
     }
 
