@@ -22,6 +22,7 @@ interface UserData {
 
 export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null)
+  const [hash, setHash] = useState<string | null>(null);
 
   useEffect(() => {
     if (window.Telegram?.WebApp && typeof window !== 'undefined'){
@@ -29,12 +30,11 @@ export default function Home() {
 
       if (WebApp.initDataUnsafe.user as UserData) {
         setUserData(WebApp.initDataUnsafe.user as UserData)
+        setHash(WebApp.initDataUnsafe.hash)
       }
     }
 
   }, []);
-
-  console.log(userData)
 
   return (
     <main className={"p-1 h-[100vh] relative"}>
@@ -56,6 +56,7 @@ export default function Home() {
 
                   <div className="w-full bg-neutral-400 rounded-3xl p-5 grow">
                     <h1>Username: {userData.username}</h1>
+                    <p>Hash: {hash}</p>
                   </div>
                 </div>
             ) :
