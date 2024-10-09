@@ -1,6 +1,7 @@
 'use client'
 
 import {useState, useEffect} from "react";
+import WebApp from "@twa-dev/sdk";
 
 declare global {
   interface Window {
@@ -24,10 +25,10 @@ export default function Home() {
 
   useEffect(() => {
     if (window.Telegram?.WebApp){
-      window.Telegram?.WebApp.ready();
+      WebApp.ready();
 
-      if (window.Telegram?.WebApp.initDataUnsafe.user as UserData) {
-        setUserData(window.Telegram?.WebApp.initDataUnsafe.user as UserData)
+      if (WebApp.initDataUnsafe.user as UserData) {
+        setUserData(WebApp.initDataUnsafe.user as UserData)
       }
     }
 
