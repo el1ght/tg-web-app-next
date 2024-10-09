@@ -24,7 +24,7 @@ export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null)
 
   useEffect(() => {
-    if (window.Telegram?.WebApp){
+    if (window.Telegram?.WebApp && typeof window !== 'undefined'){
       WebApp.ready();
 
       if (WebApp.initDataUnsafe.user as UserData) {
@@ -33,6 +33,8 @@ export default function Home() {
     }
 
   }, []);
+
+  console.log(userData)
 
   return (
     <main className={"p-4"}>
@@ -44,7 +46,10 @@ export default function Home() {
                   <ul>
                     <li>ID: {userData.id}</li>
                     <li>First Name: {userData.first_name}</li>
+                    <li>Last Name: {userData.last_name}</li>
                     <li>Username: {userData.username}</li>
+                    <li>Lang: {userData.language_code}</li>
+                    <li>Is premium: {userData.is_premium ? "Yes" : "No"}</li>
                   </ul>
                 </>
             ) :
