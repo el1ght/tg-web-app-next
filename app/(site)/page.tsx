@@ -37,24 +37,32 @@ export default function Home() {
   console.log(userData)
 
   return (
-    <main className={"p-4"}>
+    <main className={"p-1 h-[100vh] relative"}>
       {
         userData ?
             (
-                <>
-                  <h1 className="text-2xl font-bold mb-4">User Data</h1>
-                  <ul>
-                    <li>ID: {userData.id}</li>
-                    <li>First Name: {userData.first_name}</li>
-                    <li>Last Name: {userData.last_name}</li>
-                    <li>Username: {userData.username}</li>
-                    <li>Lang: {userData.language_code}</li>
-                    <li>Is premium: {userData.is_premium ? "Yes" : "No"}</li>
-                  </ul>
-                </>
+                <div className="flex flex-col gap-1 h-[100%]">
+                  <div className="p-2 flex w-full bg-neutral-600 rounded-3xl justify-between items-center flex-none">
+                    <div className={`main-button`}>
+
+                    </div>
+                    <div>
+                      Logo
+                    </div>
+                    <div>
+                      Search
+                    </div>
+                  </div>
+
+                  <div className="w-full bg-neutral-400 rounded-3xl p-5 grow">
+                    <h1>Username: {userData.username}</h1>
+                  </div>
+                </div>
             ) :
             (
-                <div>Loading...</div>
+                <div>
+                  Loading...
+                </div>
             )
       }
     </main>
