@@ -3,7 +3,7 @@
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
 import Image from "next/image";
-import logo from "@/app/public/logo.svg";
+import logo from "@/public/logo.svg";
 
 declare global {
   interface Window {
