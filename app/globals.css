@@ -14,7 +14,7 @@ html,
 body,
 :root{
     height: 100%;
-    background: radial-gradient(white, #cccccc);
+    /*background: radial-gradient(white, #cccccc);*/
     color-scheme: light;
 }
 

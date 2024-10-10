@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={"p-5 h-[100vh] relative shadow-md w-full bg-white overflow-y-auto rounded-3xl"}>
+    <div>
       {
         userData ?
             (

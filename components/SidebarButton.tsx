@@ -28,6 +28,7 @@ const SidebarButton: React.FC<SidebarItemProps> = ({
                 bg-[#FFF8F2]/[.4] 
                 transition
                 shadow-xl
+                text-black
             `,
                 active && "bg-white"
             )}
