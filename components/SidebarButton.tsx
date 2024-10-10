@@ -4,7 +4,6 @@ import {twMerge} from "tailwind-merge";
 
 interface SidebarItemProps {
     icon: IconType;
-    label: string;
     active?: boolean;
     href: string;
 }
