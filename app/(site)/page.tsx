@@ -2,8 +2,6 @@
 
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
-import Image from "next/image";
-import logo from "@/public/logo.svg";
 
 declare global {
   interface Window {
@@ -39,30 +37,13 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={"p-1 h-[100vh] relative"}>
+    <div className={"p-5 h-[100vh] relative shadow-md w-full bg-white overflow-y-auto rounded-3xl"}>
       {
         userData ?
             (
-                <div className="flex flex-col gap-1 h-[100%]">
-                  <div className="p-2 flex w-full bg-[#424242]/[.55] backdrop-blur-md rounded-3xl justify-between items-center flex-none shadow">
-                    <div className={'button-default'}>
-
-                    </div>
-                    <div>
-                      <Image src={logo} alt={"Logo"} width={30} height={30} />
-                    </div>
-                    <div className={"button-default"}>
-
-                    </div>
-                  </div>
-
-                  <main className="w-full bg-white overflow-y-auto rounded-3xl p-5 grow shadow">
-                    <div className="content">
-                      <h1>Username: {userData.username}</h1>
-                      <p>Hash: {hash}</p>
-                    </div>
-
-                  </main>
+                <div className="content">
+                  <h1>Username: {userData.username}</h1>
+                  <p>Hash: {hash}</p>
                 </div>
             ) :
             (
@@ -71,6 +52,6 @@ export default function Home() {
                 </div>
             )
       }
-    </main>
+    </div>
   );
 }

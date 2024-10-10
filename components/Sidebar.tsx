@@ -7,13 +7,7 @@ import {PiPlaylistBold} from "react-icons/pi";
 import {IoPersonAdd} from "react-icons/io5";
 import SidebarButton from "./SidebarButton";
 
-interface SidebarProps {
-    children: React.ReactNode;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({
-    children
-}) => {
+const Sidebar = () => {
     const pathname = usePathname();
 
     const routes = useMemo(() => [
@@ -49,9 +43,6 @@ const Sidebar: React.FC<SidebarProps> = ({
                     ))}
                 </div>
             </div>
-            <main>
-                {children}
-            </main>
         </div>
     );
 };
