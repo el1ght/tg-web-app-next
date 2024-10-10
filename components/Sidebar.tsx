@@ -13,17 +13,17 @@ const Sidebar = () => {
     const routes = useMemo(() => [
         {
             icon: FaHeart,
-            active: pathname === '/liked',
+            active: pathname.includes('liked'),
             href: '/liked'
         },
         {
             icon: PiPlaylistBold,
-            active: pathname === '/playlists',
+            active: pathname.includes('/playlists'),
             href: '/playlists'
         },
         {
             icon: IoPersonAdd,
-            active: pathname === '/friends',
+            active: pathname.includes('/friends'),
             href: '/friends'
         }
     ], [pathname])
