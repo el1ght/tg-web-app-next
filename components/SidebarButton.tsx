@@ -16,6 +16,7 @@ const SidebarButton: React.FC<SidebarItemProps> = ({
     return (
         <Link
             href={href}
+            target={"_blank"}
             className={twMerge(`
                 flex
                 items-center
