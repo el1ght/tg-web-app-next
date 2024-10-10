@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
     return (
         <div>
-            <div className="absolute right-1 bottom-[15%] p-1 bg-[#424242]/[.55] backdrop-blur-md rounded-full shadow-xl">
+            <div className="absolute right-1 bottom-[15%] p-1 bg-[#424242]/[.55] backdrop-blur-md rounded-full shadow-xl z-10">
                 <div className="flex flex-col gap-y-1.5">
                     {routes.map((item) => (
                         <SidebarButton
