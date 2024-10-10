@@ -13,19 +13,16 @@ const Sidebar = () => {
     const routes = useMemo(() => [
         {
             icon: FaHeart,
-            label: 'Liked',
             active: pathname === '/liked',
             href: '/liked'
         },
         {
             icon: PiPlaylistBold,
-            label: 'Playlists',
             active: pathname === '/playlists',
             href: '/playlists'
         },
         {
             icon: IoPersonAdd,
-            label: 'Friends',
             active: pathname === '/friends',
             href: '/friends'
         }
@@ -37,7 +34,7 @@ const Sidebar = () => {
                 <div className="flex flex-col gap-y-1.5">
                     {routes.map((item) => (
                         <SidebarButton
-                            key={item.label}
+                            key={item.href}
                             {...item}
                         />
                     ))}

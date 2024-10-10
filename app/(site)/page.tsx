@@ -2,6 +2,7 @@
 
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
+import HomeContent from "@/components/HomeContent"
 
 declare global {
   interface Window {
@@ -37,21 +38,26 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+      <>
       {
         userData ?
             (
-                <div className="content">
-                  <h1>Username: {userData.username}</h1>
-                  <p>Hash: {hash}</p>
-                </div>
+                <HomeContent>
+                   <div className="content">
+                     <h1>Username: {userData.username}</h1>
+                     <p>Hash: {hash}</p>
+                  </div>
+                </HomeContent>
+
             ) :
             (
-                <div>
-                  Loading...
-                </div>
+
+                  <HomeContent>
+                    Loading...
+                  </HomeContent>
+
             )
       }
-    </div>
+      </>
   );
 }

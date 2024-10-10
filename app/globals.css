@@ -25,7 +25,7 @@ body,
     background-color: #FFF8F2;
     opacity: 40%;
     transition: .2s ease-in-out all;
-    box-shadow: 1px 1px 3px #565656;
+    box-shadow: 1px 1px 3px #626262;
 }
 .button-default:hover{
     background-color: #fff;

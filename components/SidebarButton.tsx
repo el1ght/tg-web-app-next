@@ -11,7 +11,6 @@ interface SidebarItemProps {
 
 const SidebarButton: React.FC<SidebarItemProps> = ({
     icon: Icon,
-    label,
     active,
     href
 }) => {
@@ -29,6 +28,7 @@ const SidebarButton: React.FC<SidebarItemProps> = ({
                 transition
                 shadow-xl
                 text-black
+                hover:bg-white
             `,
                 active && "bg-white"
             )}
