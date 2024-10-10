@@ -6,6 +6,7 @@ import {IoPerson, IoSearch} from "react-icons/io5";
 import Link from "next/link";
 
 const Header = () => {
+
     return (
         <div className="flex p-2 w-full bg-[#424242]/[.55] backdrop-blur-md rounded-3xl justify-between items-center flex-none shadow">
             <Link href={'/me'} className={'flex w-14 h-14 rounded-full bg-[#FFF8F2]/[.4] justify-center items-center transition hover:bg-[#fff]/[100] shadow-md'}>

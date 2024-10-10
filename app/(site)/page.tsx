@@ -3,6 +3,7 @@
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
 import HomeContent from "@/components/HomeContent"
+import {usePathname} from "next/navigation";
 
 declare global {
   interface Window {
@@ -37,8 +38,11 @@ export default function Home() {
 
   }, []);
 
+  const pathname = usePathname();
+
   return (
       <>
+        <p>Pathname: {pathname}</p>
       {
         userData ?
             (
@@ -46,6 +50,7 @@ export default function Home() {
                    <div className="content">
                      <h1>Username: {userData.username}</h1>
                      <p>Hash: {hash}</p>
+
                   </div>
                 </HomeContent>
 
