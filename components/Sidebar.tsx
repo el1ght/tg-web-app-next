@@ -5,6 +5,7 @@ import {useMemo} from "react";
 import {FaHeart} from "react-icons/fa6";
 import {PiPlaylistBold} from "react-icons/pi";
 import {IoPersonAdd} from "react-icons/io5";
+import SidebarButton from "./SidebarButton";
 
 interface SidebarProps {
     children: React.ReactNode;
@@ -19,7 +20,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         {
             icon: FaHeart,
             label: 'Liked',
-            active: pathname === '/search',
+            active: pathname === '/liked',
             href: '/liked'
         },
         {
@@ -38,8 +39,8 @@ const Sidebar: React.FC<SidebarProps> = ({
 
     return (
         <div>
-            <div className="absolute right-0 bottom-0 p-2 bg-[#424242]/[.55] backdrop-blur-md rounded-full shadow">
-                <div className="flex flex-col gap-y-2">
+            <div className="absolute right-1 bottom-[15%] p-1 bg-[#424242]/[.55] backdrop-blur-md rounded-full shadow-xl">
+                <div className="flex flex-col gap-y-1.5">
                     {routes.map((item) => (
                         <SidebarButton
                             key={item.label}
@@ -48,6 +49,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                     ))}
                 </div>
             </div>
+            <main>
+                {children}
+            </main>
         </div>
     );
 };
