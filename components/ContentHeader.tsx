@@ -19,6 +19,7 @@ const ContentHeader: React.FC<ContentHeaderProps> = ({
                     <RxCaretLeft className={"text-white"} size={35} />
                 </button>
             </div>
+            {children}
         </div>
     );
 };
