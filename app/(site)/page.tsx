@@ -80,6 +80,48 @@ export default function Home() {
                          <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
                          <p className={"truncate"}>Hash: {hash}</p>
 
+                         <div className="mb-2">
+                           <h1 className="text-white text-3xl font-semibold">
+                             Welcome back, {userData.first_name}
+                           </h1>
+                         </div>
+
+                         <h1 className={"truncate"}>Username: {userData.username}</h1>
+                         <p>ID: {userData.id}</p>
+                         <p>First Name: {userData.first_name}</p>
+                         <p>Last Name: {userData.last_name}</p>
+                         <p>Language code: {userData.language_code}</p>
+                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
+                         <p className={"truncate"}>Hash: {hash}</p>
+
+                         <div className="mb-2">
+                           <h1 className="text-white text-3xl font-semibold">
+                             Welcome back, {userData.first_name}
+                           </h1>
+                         </div>
+
+                         <h1 className={"truncate"}>Username: {userData.username}</h1>
+                         <p>ID: {userData.id}</p>
+                         <p>First Name: {userData.first_name}</p>
+                         <p>Last Name: {userData.last_name}</p>
+                         <p>Language code: {userData.language_code}</p>
+                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
+                         <p className={"truncate"}>Hash: {hash}</p>
+
+                         <div className="mb-2">
+                           <h1 className="text-white text-3xl font-semibold">
+                             Welcome back, {userData.first_name}
+                           </h1>
+                         </div>
+
+                         <h1 className={"truncate"}>Username: {userData.username}</h1>
+                         <p>ID: {userData.id}</p>
+                         <p>First Name: {userData.first_name}</p>
+                         <p>Last Name: {userData.last_name}</p>
+                         <p>Language code: {userData.language_code}</p>
+                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
+                         <p className={"truncate"}>Hash: {hash}</p>
+
                          {/*<Image src={`${userData.photo_url}`} alt={'avatar'} width={30} height={30} />*/}
                        </div>
                   ) :
