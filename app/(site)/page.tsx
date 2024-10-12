@@ -3,7 +3,7 @@
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
 import ContentHeader from "@/components/ContentHeader";
-import Image from "next/image";
+// import Image from "next/image";
 
 declare global {
   interface Window {
