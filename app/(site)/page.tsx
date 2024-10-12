@@ -2,6 +2,8 @@
 
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
+import ContentHeader from "@/components/ContentHeader";
+import Image from "next/image";
 
 declare global {
   interface Window {
@@ -20,6 +22,7 @@ interface UserData {
   username?: string;
   language_code: string;
   is_premium?: boolean;
+  photo_url?: string;
 }
 
 export default function Home() {
@@ -57,12 +60,23 @@ export default function Home() {
 
   return (
       <>
+        <ContentHeader>
+          Content header
+        </ContentHeader>
       {
         userData ?
             (
                  <div className="content">
+
                    <h1 className={"truncate"}>Username: {userData.username}</h1>
+                   <p>ID: {userData.id}</p>
+                   <p>First Name: {userData.first_name}</p>
+                   <p>Last Name: {userData.last_name}</p>
+                   <p>Language code: {userData.language_code}</p>
+                   <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
                    <p className={"truncate"}>Hash: {hash}</p>
+
+                   <Image src={`${userData.photo_url}`} alt={'avatar'} width={30} height={30} />
                  </div>
             ) :
             (
