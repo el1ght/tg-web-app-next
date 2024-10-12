@@ -3,47 +3,36 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: white;
-    color: black;
+    overflow: hidden;
+    background: radial-gradient(169.40% 89.55% at 94.76% 6.29%,rgba(255,255,255) 0%, rgb(143, 143, 143) 100%);
 }
 
 html,
 body,
 :root{
     height: 100%;
-    /*background: radial-gradient(white, #cccccc);*/
     color-scheme: light;
 }
 
-.button-default{
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: #FFF8F2;
-    opacity: 40%;
-    transition: .2s ease-in-out all;
-    box-shadow: 1px 1px 3px #626262;
-}
-.button-default:hover{
-    background-color: #fff;
-    opacity: 100%;
-}
-.button-default.active{
-    background-color: #fff;
-    opacity: 100%;
-}
+/*.button-default{*/
+/*    width: 3.5rem;*/
+/*    height: 3.5rem;*/
+/*    border-radius: 50%;*/
+/*    background-color: #FFF8F2;*/
+/*    opacity: 40%;*/
+/*    transition: .2s ease-in-out all;*/
+/*    box-shadow: 1px 1px 3px #626262;*/
+/*}*/
+/*.button-default:hover{*/
+/*    background-color: #fff;*/
+/*    opacity: 100%;*/
+/*}*/
+/*.button-default.active{*/
+/*    background-color: #fff;*/
+/*    opacity: 100%;*/
+/*}*/
 
-
-
-.main{
-    /*border-radius: 1.5rem;*/
-    /*width: 100%;*/
-    /*padding: 1.25rem;*/
-    /*flex-grow: 1;*/
-    /*border: 1px solid black;*/
-    /*box-shadow: 1px 1px 5px black;*/
-}
+/*.main{*/
+/*    !*border-radius: 50px;*!*/
+/*}*/
 
