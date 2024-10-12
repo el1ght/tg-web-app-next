@@ -76,7 +76,7 @@ export default function Home() {
                    <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
                    <p className={"truncate"}>Hash: {hash}</p>
 
-                   <Image src={`${userData.photo_url}`} alt={'avatar'} width={30} height={30} />
+                   {/*<Image src={`${userData.photo_url}`} alt={'avatar'} width={30} height={30} />*/}
                  </div>
             ) :
             (
