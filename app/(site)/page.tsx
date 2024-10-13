@@ -67,17 +67,17 @@ export default function Home() {
 
                        <div className="h-full">
                          <div className="mb-2">
-                           <h1 className="text-white text-3xl font-semibold">
-                             Welcome back, {userData.first_name}
+                           <h1 className="text-white text-xl font-semibold">
+                             Welcome Home, {userData.first_name}
                            </h1>
                          </div>
 
-                         <div className="grid grid-rows-7 grid-cols-5 gap-2 h-full">
-                           <div className="bg-[#424242] row-span-3 col-span-3 rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-4 col-span-2 rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-4 col-span-2 rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-4 col-span-1 rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-3 col-span-2 rounded-3xl"></div>
+                         <div className="grid grid-rows-8 grid-cols-5 gap-2 h-full">
+                           <div className="bg-[#424242] row-span-2 col-span-5 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-2 col-span-3 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-6 col-span-2 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-2 col-span-3 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-2 col-span-3 rounded-3xl"></div>
                          </div>
                        </div>
                   ) :
