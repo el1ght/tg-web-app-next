@@ -65,69 +65,27 @@ export default function Home() {
               userData ?
                   (
 
-                       <div className="content">
+                       <div className="h-full">
                          <div className="mb-2">
                            <h1 className="text-white text-3xl font-semibold">
                              Welcome back, {userData.first_name}
                            </h1>
                          </div>
 
-                         <h1 className={"truncate"}>Username: {userData.username}</h1>
-                         <p>ID: {userData.id}</p>
-                         <p>First Name: {userData.first_name}</p>
-                         <p>Last Name: {userData.last_name}</p>
-                         <p>Language code: {userData.language_code}</p>
-                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
-                         <p className={"truncate"}>Hash: {hash}</p>
-
-                         <div className="mb-2">
-                           <h1 className="text-white text-3xl font-semibold">
-                             Welcome back, {userData.first_name}
-                           </h1>
+                         <div className="grid grid-rows-7 grid-cols-5 gap-2 h-full">
+                           <div className="bg-[#424242] row-span-3 col-span-3 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-4 col-span-2 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-4 col-span-2 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-4 col-span-1 rounded-3xl"></div>
+                           <div className="bg-[#424242] row-span-3 col-span-2 rounded-3xl"></div>
                          </div>
-
-                         <h1 className={"truncate"}>Username: {userData.username}</h1>
-                         <p>ID: {userData.id}</p>
-                         <p>First Name: {userData.first_name}</p>
-                         <p>Last Name: {userData.last_name}</p>
-                         <p>Language code: {userData.language_code}</p>
-                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
-                         <p className={"truncate"}>Hash: {hash}</p>
-
-                         <div className="mb-2">
-                           <h1 className="text-white text-3xl font-semibold">
-                             Welcome back, {userData.first_name}
-                           </h1>
-                         </div>
-
-                         <h1 className={"truncate"}>Username: {userData.username}</h1>
-                         <p>ID: {userData.id}</p>
-                         <p>First Name: {userData.first_name}</p>
-                         <p>Last Name: {userData.last_name}</p>
-                         <p>Language code: {userData.language_code}</p>
-                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
-                         <p className={"truncate"}>Hash: {hash}</p>
-
-                         <div className="mb-2">
-                           <h1 className="text-white text-3xl font-semibold">
-                             Welcome back, {userData.first_name}
-                           </h1>
-                         </div>
-
-                         <h1 className={"truncate"}>Username: {userData.username}</h1>
-                         <p>ID: {userData.id}</p>
-                         <p>First Name: {userData.first_name}</p>
-                         <p>Last Name: {userData.last_name}</p>
-                         <p>Language code: {userData.language_code}</p>
-                         <p>Is premium: {userData.is_premium ? 'Yes' : 'No'}</p>
-                         <p className={"truncate"}>Hash: {hash}</p>
-
-                         {/*<Image src={`${userData.photo_url}`} alt={'avatar'} width={30} height={30} />*/}
                        </div>
                   ) :
                   (
                        <div>
                          Loading...
+
+
                        </div>
                   )
             }

@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({
                     <IoSearch className={"text-black"} size={20} />
                 </Link>
             </div>
-            <main className="h-full rounded-[40px] flex-1 overflow-y-auto shadow-md bg-gradient-to-b from-[#424242]/[.5]">
+            <main className="h-full rounded-[30px] flex-1 overflow-y-auto shadow-md bg-gradient-to-b from-[#424242]/[.5]">
                 {children}
             </main>
         </div>
