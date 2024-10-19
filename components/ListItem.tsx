@@ -7,7 +7,6 @@ import {forwardRef} from "react";
 interface ListItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     name: string;
     href: string;
-    styles: string;
 }
 
 const ListItem = forwardRef<HTMLButtonElement, ListItemProps>(({
