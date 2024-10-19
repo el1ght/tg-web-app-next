@@ -2,17 +2,18 @@
 
 import {useRouter} from "next/navigation";
 import Image from "next/image";
+import {forwardRef} from "react";
 
-interface ListItemProps {
+interface ListItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     name: string;
     href: string;
-    classname: string;
+    styles: string;
 }
 
-const ListItem: React.FC<ListItemProps> = ({
+const ListItem = forwardRef<HTMLButtonElement, ListItemProps>(({
+    className,
     name,
     href,
-    classname
 }) => {
     const router = useRouter();
 
@@ -21,7 +22,7 @@ const ListItem: React.FC<ListItemProps> = ({
     }
 
     return (
-        <button onClick={onClick} className={classname}>
+        <button onClick={onClick} className={className}>
             <div className={"relative group flex items-center h-full bg-cover bg-center overflow-hidden hover:saturate-150 transition bg-[url('../public/images/favBg.jpg')]"}>
                 <div className={'h-full w-full bg-black/[.4] flex items-center justify-center rounded-3xl backdrop-blur'}>
                     <p className={'truncate text-white font-medium'}>{name}</p>
@@ -33,6 +34,6 @@ const ListItem: React.FC<ListItemProps> = ({
 
         </button>
     );
-};
+});
 
 export default ListItem;

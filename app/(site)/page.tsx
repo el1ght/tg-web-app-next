@@ -74,7 +74,7 @@ export default function Home() {
                          </div>
 
                          <div className="grid grid-rows-8 grid-cols-5 md:grid-rows-10 md:grid-cols-10 gap-2 h-full">
-                           <ListItem className="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl" />
+                           <ListItem href={'liked'} name={'Liked Songs'} image={'/images/favBg.jpg'} styles="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl overflow-hidden" />
                            <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
                            <div className="bg-[#424242] row-span-6 col-span-2 md:row-span-2 md:col-span-full rounded-3xl"></div>
                            <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
@@ -86,7 +86,7 @@ export default function Home() {
                        <div className={'h-full'}>
                          Loading...
                          <div className="grid grid-rows-8 grid-cols-5 md:grid-rows-10 md:grid-cols-10 gap-2 h-full">
-                           <ListItem href={'liked'} name={'Liked Songs'} image={'/images/favBg.jpg'} classname="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl overflow-hidden" />
+                           <ListItem href={'liked'} name={'Liked Songs'} className="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl overflow-hidden" />
                            <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
                            <div className="bg-[#424242] row-span-6 col-span-2 md:row-span-2 md:col-span-full rounded-3xl"></div>
                            <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
