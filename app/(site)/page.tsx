@@ -3,8 +3,12 @@
 import {useState, useEffect} from "react";
 import WebApp from "@twa-dev/sdk";
 import ContentHeader from "@/components/ContentHeader";
-import ListItem from "@/components/ListItem";
+import LikedWidget from "@/components/LikedWidget";
 import Image from "next/image";
+import {twMerge} from "tailwind-merge";
+import ListItem from "@/components/ListItem";
+import {FaPlay} from "react-icons/fa";
+import VerticalWidget from "@/components/VerticalWidget";
 
 declare global {
   interface Window {
@@ -74,27 +78,41 @@ export default function Home() {
                          </div>
 
                          <div className="grid grid-rows-8 grid-cols-5 md:grid-rows-10 md:grid-cols-10 gap-2 h-full">
-                           <ListItem href={'liked'} name={'Liked Songs'} className="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl overflow-hidden" />
-                           <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-6 col-span-2 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                         </div>
+                           <LikedWidget href={'liked'} name={'Liked Songs'} className="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl overflow-hidden" />
 
-                         <p>Sorry, but...</p>
-                         <p>That&apos;s all</p>
+                           <div className={'row-span-2 col-span-3 md:row-span-2 md:col-span-full relative'}>
+                             <ListItem href={'top-charts'} name={'Top Charts'} className={twMerge(`h-full w-full rounded-3xl bg-1`, "top-left")} />
+                             <div className={'absolute right-0.5 bottom-0.5 rounded-full p-2'}>
+                               <FaPlay size={14} className={'text-black'} />
+                             </div>
+                           </div>
+
+                           <div className="bg-[#424242] row-span-6 col-span-2 md:row-span-2 md:col-span-full rounded-3xl bg-4">
+                             <VerticalWidget name={'YOU'} href={'you-may-like'} className={'h-full w-full'} />
+                           </div>
+
+                           <div className={'row-span-2 col-span-3 md:row-span-2 md:col-span-full relative'}>
+                             <ListItem href={'world-top'} name={'World Top'} className={twMerge(`h-full w-full rounded-3xl bg-2`, "top-left")} />
+                             <div className={'absolute right-0.5 bottom-0.5 rounded-full p-2'}>
+                               <FaPlay size={14} className={'text-black'} />
+                             </div>
+                           </div>
+
+                           <div className={'row-span-2 col-span-3 md:row-span-2 md:col-span-full relative'}>
+                             <ListItem href={'week-hot'} name={'Week Hot'} className={twMerge(`h-full w-full rounded-3xl bg-3`, "top-left")} />
+                             <div className={'absolute right-0.5 bottom-0.5 rounded-full p-2'}>
+                               <FaPlay size={14} className={'text-black'} />
+                             </div>
+                           </div>
+
+
+                         </div>
                        </div>
                   ) :
                   (
-                       <div className={'h-full'}>
+                       <div>
                          Loading...
-                         <div className="grid grid-rows-8 grid-cols-5 md:grid-rows-10 md:grid-cols-10 gap-2 h-full">
-                           <ListItem href={'liked'} name={'Liked Songs'} className="bg-[#424242] row-span-2 col-span-5 md:row-span-2 md:col-span-full rounded-3xl overflow-hidden" />
-                           <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-6 col-span-2 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                           <div className="bg-[#424242] row-span-2 col-span-3 md:row-span-2 md:col-span-full rounded-3xl"></div>
-                         </div>
+
                        </div>
                   )
             }

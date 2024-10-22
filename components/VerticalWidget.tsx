@@ -23,9 +23,10 @@ const ListItem = forwardRef<HTMLButtonElement, ListItemProps>(({
     return (
         <button onClick={onClick} className={className}>
             <div className={"relative group flex items-center h-full bg-cover bg-center overflow-hidden hover:saturate-150 transition"}>
-                <div className={'relative h-full w-full bg-black/[.3]'}>
-                    <p className={'truncate text-white text-left m-4 mb-0 text-sm font-medium'}>{name}</p>
-                    <p className={'truncate text-white text-left ml-4 text-[0.6rem] max-w-[100px]'}>21 Savage, Lana Del Rey, Kendrick Lamar</p>
+                <div className={'relative h-full w-full bg-black/[.3] rounded-3xl flex flex-col items-center justify-center'}>
+                    <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}>YOU</p>
+                    <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}>MAY</p>
+                    <p className={'truncate text-white text-[1.5rem] max-w-[100px] font-medium'}>LIKE</p>
                 </div>
             </div>
 
